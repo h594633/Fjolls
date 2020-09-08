@@ -8,30 +8,23 @@ public class Oppg5 {
 			int score = Integer.parseInt(javax.swing.JOptionPane.showInputDialog("antall poeng"));
 			char rating = '#';
 
-			if (score >= 0 && score <= 39) {
-				rating = 'F';
-			}
-			if (score >= 40 && (score <= 49)) {
-				rating = 'E';
-			}
-			if (score >= 50 && score <= 59) {
-				rating = 'D';
-			}
-			if (score >= 60 && score <= 79) {
-				rating = 'C';
-			}
-			if (score >= 80 && score <= 89) {
-				rating = 'B';
-			}
-			if (score >= 90 && score <= 100) {
-				rating = 'A';
-			}
-
+			
+			
 			if (score < 0 || score > 100) {
 				javax.swing.JOptionPane.showMessageDialog(null, "Ugyldig verdi, velg verdi mellom 0 og 100.");
 				--i;
-			} else
-				javax.swing.JOptionPane.showMessageDialog(null, "Karakter " + rating);
+			} else {
+				if (score >= 0 && score <= 39) {rating = 'F';}
+				else if (score <= 49) {rating = 'E';}
+				else if (score <= 59) {rating = 'D';}
+				else if (score <= 79) {rating = 'C';}
+				else if (score <= 89) {rating = 'B';}
+				else if (score <= 100) {rating = 'A';}
+				javax.swing.JOptionPane.showMessageDialog(null, "Karakter " + rating );
+			}
+		
+			
+
 
 		}
 
